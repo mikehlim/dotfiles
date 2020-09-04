@@ -1,0 +1,63 @@
+[global]
+monitor = 0
+follow = mouse
+geometry = "300x60-20+48"
+indicate_hidden = yes
+shrink = no
+separator_height = 0
+padding = 24
+horizontal_padding = 24
+frame_width = 2
+sort = no
+idle_threshold = 60
+font = Terminus (TTF) Medium 12
+line_height = 4
+markup = full
+format = %s\n%b
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = no
+show_indicators = yes
+icon_position = left
+max_icon_size = 32
+sticky_history = yes
+history_length = 20
+browser = google-chrome
+always_run_script = true
+title = Dunst
+class = Dunst
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
+
+[urgency_low]
+timeout = 60
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#8bc34a"
+
+[urgency_normal]
+timeout = 120
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#5294e2"
+
+[urgency_critical]
+timeout = 180
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#ff7043"
+
+[play_sound]
+
+#summary = "*"
+#script = ~/.config/dunst/notification_default.sh
+
+summary = "New message in kashable-*"
+script = ~/.config/dunst/notification_default.sh
