@@ -1,0 +1,124 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        output_format = "i3bar"
+        colors = true
+        color_good =     '#aaaaaa'  
+        color_degraded = '#ffcc00'  
+        color_bad =      '#ff0000'   
+        interval = 1
+        markup = "pango"
+}
+
+#order += "cpu_temperature 0"
+#order += "ipv6"
+order += "cpu_usage"
+order += "memory"
+#order += "load"
+order += "disk /"
+order += "wireless _first_"
+order += "ethernet _first_"
+#order += "run_watch VPNC"
+order += "path_exists vpn"
+
+order += "volume master"
+order += "battery all"
+order += "tztime local"
+
+
+
+cpu_usage {
+       #format = " %usage "
+        format = "<span color='#ff0000'>cpu</span> %usage"
+}
+
+#cpu_temperature 0 {
+#        #format = " %degrees °C"
+#        format = "nyc %degrees °F" 
+#        path = "~/.config/weather"
+        #path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
+}
+
+memory {
+        #format =" %used"
+        format ="<span color='#ffcc00'>ram</span> %used"
+        threshold_degraded = "1G"
+        format_degraded = " < %available"
+}
+
+wireless _first_ {
+        #format_up = " %ip (%essid|%quality|%bitrate|%frequency)"
+        #format_down = " down"
+        format_up = "<span color='#9933ff'>wifi</span> %ip (%essid|%quality|%bitrate|%frequency)"
+        format_down = "<span color='#9933ff'>wifi</span> down"
+}
+
+ethernet _first_ {
+        # if you use %speed, i3status requires root privileges
+        #format_up = " %ip (%speed)"
+        #format_down = " down"
+        format_up = "<span color='#b3d1ff'>eth</span> %ip (%speed)"
+        format_down = "<span color='#b3d1ff'>eth</span> down"
+}
+
+# run_watch VPNC {
+#                   # file containing the PID of a vpnc process
+#                   pidfile = "/var/run/NetworkManager/nm-vpnc-*.pid"
+#           }
+
+path_exists vpn {
+                   # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+                   path = "/proc/sys/net/ipv4/conf/tun0"
+           }
+
+
+battery all {
+        # format = "%status %percentage %remaining %emptytime"
+        format = " %status %percentage"
+
+        format_down = "No battery"
+        last_full_capacity = true
+        integer_battery_capacity = true
+        #status_chr = ""
+        status_chr = "<span color='#70db70'>battery</span> charging"
+        #status_bat = ""
+        status_bat = "<span color='#70db70'>battery</span> discharging"
+        #status_bat = ""
+        # status_unk = "?"
+        status_unk = "<span color='#70db70'>battery</span> unknown"
+        status_full = "<span color='#70db70'>battery</span> full"
+        #status_full = ""
+        #status_full = "☻"
+        low_threshold = 15
+        threshold_type = time
+}
+
+tztime local {
+        format = "%a, %b %d, %l:%M %p"
+       
+}
+
+#load {
+#        format = "%1min"
+#}
+
+disk "/" {
+        #format = "⛁ %avail"
+        format = "<span color='#5091C7'>disk</span> %avail"
+}
+
+volume master {
+        #format = " %volume"
+        #format_muted = " (%volume)"
+        format = "<span color='#cc6699'>volume</span> %volume"
+        format_muted = "<span color='#cc6699'>mute</span> (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
