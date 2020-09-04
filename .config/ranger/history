@@ -1,0 +1,35 @@
+rename workspace
+find pi
+find pia
+p
+h zip
+AliasCommand 
+shell mkdir Office365
+rename WordExcelPowerPoint-Monthly.xml
+rename AllProducts.xml
+search theme
+delete
+shell sudo ranger
+search gnome
+search themes
+search icons
+shell sudo chmod 755 -R Wallpaper
+shell sudo chown root:root -R Wallpaper
+shell nano .bashrc
+shell sudo mv ubuntu-dock@ubuntu.com ubuntu-dock@ubuntu.com_backup
+filter 
+shell mkdir Ansible
+
+search An
+rename Acrobat DC Pro Licenses 0884001128.PDF
+shell 
+search ran
+search fonts
+shell chmod +x cpu-label
+search ligh
+search lightdm
+open_with 
+search regol
+rename config.bak
+rename USPS_5laptop_shipping.jpg
+rename USPS_5_laptops_shipping.jpg
