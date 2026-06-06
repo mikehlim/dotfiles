@@ -64,6 +64,5 @@ fi
 #	}
 
 #exec $(get_session)
-
-exec i3 --shmlog-size 0
-#exec openbox 
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+exec i3
