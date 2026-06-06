@@ -10,7 +10,8 @@ horizontal_padding = 24
 frame_width = 2
 sort = no
 idle_threshold = 60
-font = Terminus (TTF) Medium 12
+font = Monospace 11
+#font = Terminus (TTF) Medium 15
 line_height = 4
 markup = full
 format = %s\n%b
@@ -22,7 +23,12 @@ stack_duplicates = false
 hide_duplicate_count = no
 show_indicators = yes
 icon_position = left
-max_icon_size = 32
+max_icon_size = 48
+icon_path = /usr/share/icons/hicolor/48x48/apps:/usr/share/icons/hicolor/32x32/apps:/usr/share/pixmaps:/usr/share/icons/Adwaita/48x48/apps
+enable_recursive_icon_lookup = true
+mouse_left_click = do_action, close_current
+mouse_middle_click = close_current
+mouse_right_click = close_all
 sticky_history = yes
 history_length = 20
 browser = google-chrome
@@ -38,20 +44,20 @@ context = ctrl+shift+period
 
 [urgency_low]
 timeout = 60
-background = "#141c21"
-foreground = "#93a1a1"
+background = "#fafafa"
+foreground = "#333333"
 frame_color = "#8bc34a"
 
 [urgency_normal]
 timeout = 120
-background = "#141c21"
-foreground = "#93a1a1"
+background = "#fafafa"
+foreground = "#333333"
 frame_color = "#5294e2"
 
 [urgency_critical]
 timeout = 180
-background = "#141c21"
-foreground = "#93a1a1"
+background = "#fafafa"
+foreground = "#333333"
 frame_color = "#ff7043"
 
 [play_sound]
