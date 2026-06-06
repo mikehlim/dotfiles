@@ -469,7 +469,7 @@ exec --no-startup-id lxpolkit
 exec --no-startup-id gnome-keyring-daemon -s
 #exec --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc
 #exec --no-startup-id feh --randomize --recursive --bg-fill ~/.wallpapers
-exec_always --no-startup-id feh --randomize --recursive --bg-fill ~/.wallpapers
+exec_always --no-startup-id feh --randomize --recursive --bg-fill ~/.config/i3/wallpapers
 #exec_always --no-startup-id nitrogen --set-zoom-fill --random ~/.wallpapers --save
 exec --no-startup-id nm-applet
 #exec --no-startup-id diodon
